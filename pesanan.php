@@ -18,6 +18,8 @@ $result = $conn->query($sql); ?>
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
 <body>
     <!-- Navigation-->
@@ -88,6 +90,42 @@ $result = $conn->query($sql); ?>
             
         </div>
     </div>
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-black text-white text-center">
+                    <h3>Tambah Pesanan</h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="proses_resep.php">
+                        <div class="mb-3">
+                            <label for="nama_barang" class="form-label">Nama Barang</label>
+                            <input type="text" class="form-control" name="nama_barang" id="nama_barang" placeholder="Nama Barang" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bahan_bahan" class="form-label">Bahan-Bahan</label>
+                            <input type="text" class="form-control" name="bahan_bahan" id="bahan_bahan" placeholder="Bahan-Bahan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="foto" class="form-label">URL Foto</label>
+                            <input type="text" class="form-control" name="foto" id="foto" placeholder="URL Foto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cara_membuat" class="form-label">Cara Membuat</label>
+                            <textarea class="form-control" name="cara_membuat" id="cara_membuat" placeholder="Cara Membuat" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" name="create" class="btn btn-success w-100">Tambah Pesanan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 </section>
 <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
